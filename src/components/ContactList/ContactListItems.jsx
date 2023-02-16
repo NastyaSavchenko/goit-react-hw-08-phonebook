@@ -2,7 +2,7 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import PT from 'prop-types';
 import { BsFillPersonLinesFill, BsFillPersonXFill } from 'react-icons/bs';
 import { useDispatch } from 'react-redux';
-import { removeContact } from 'redux/operations';
+import { removeContact } from 'redux/contacts/operations';
 
 import { ContactListItemsStyled, DeleteBtnStyled } from './ContactList.styled';
 

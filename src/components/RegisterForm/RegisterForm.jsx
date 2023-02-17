@@ -1,7 +1,13 @@
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import {
+  FormBtn,
+  FormWrap,
+  Title,
+} from 'components/LoginForm/LoginForm.styled';
+import * as React from 'react';
 import { useDispatch } from 'react-redux';
-import { register } from 'redux/auth/operations';
-
-import { Form, Label } from './RegisterForm.styled';
+import { logIn, register } from 'redux/auth/operations';
 
 const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -19,21 +25,37 @@ const RegisterForm = () => {
     form.reset();
   };
   return (
-    <Form onSubmit={handleSubmit} autoComplete="off">
-      <Label>
-        Username
-        <input type="text" name="name" />
-      </Label>
-      <Label>
-        Email
-        <input type="email" name="email" />
-      </Label>
-      <Label>
-        Password
-        <input type="password" name="password" />
-      </Label>
-      <button type="submit">Register</button>
-    </Form>
+    <>
+      <Title>Registration</Title>
+      <Box
+        component="form"
+        sx={{
+          '& .MuiTextField-root': { m: 1, width: '25ch' },
+        }}
+        noValidate
+        onSubmit={handleSubmit}
+      >
+        <FormWrap>
+          <TextField required id="outlined" name="name" label="Name" />
+          <TextField
+            required
+            id="outlined-required"
+            name="email"
+            label="Email"
+          />
+
+          <TextField
+            id="outlined-password-input"
+            label="Password"
+            type="password"
+            autoComplete="current-password"
+            name="password"
+            required
+          />
+          <FormBtn type="submit">Register</FormBtn>
+        </FormWrap>
+      </Box>
+    </>
   );
 };
 

@@ -1,11 +1,13 @@
 import { LoginForm } from 'components';
 
+import { Main } from './Login.styled';
+
 const Login = () => {
   return (
-    <div>
+    <Main>
       <title>Login</title>
       <LoginForm />
-    </div>
+    </Main>
   );
 };
 

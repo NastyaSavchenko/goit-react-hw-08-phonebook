@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
-export const FormBtn = styled.button`
+export const Wrap = styled.div`
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0px 5px;
+  gap: 5px;
+`;
+
+export const LogoutBtn = styled.button`
+  padding: 8px 5px;
   cursor: pointer;
   width: 100px;
   border-radius: 6px;
@@ -33,25 +33,15 @@ export const FormBtn = styled.button`
   }
 
   @media screen and (min-width: 750px) {
-    width: 250px;
     font-size: 20px;
   }
 `;
 
-export const FormWrap = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-`;
-
-export const Title = styled.h2`
-  max-width: 500px;
-  margin: auto 30px;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50px;
-  padding-top: 50px;
-  text-align: center;
+export const UserName = styled.p`
+  font-weight: 500;
+  font-size: 15px;
+  margin-right: 10px;
+  @media screen and (min-width: 750px) {
+    font-size: 20px;
+  }
 `;
